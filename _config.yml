@@ -105,3 +105,8 @@ deploy:
   repo: https://github.com/233SunCat/233SunCat.github.io # 比如：https://github.com/YunYouJun/yunyoujun.github.io
   branch: master # 默认使用 master 分支
   message: Update Hexo Static Content # 你可以自定义此次部署更新的说明
+avatar:
+  enable: false
+  rounded: false
+  opacity: 1
+  mickey_mouse: false
