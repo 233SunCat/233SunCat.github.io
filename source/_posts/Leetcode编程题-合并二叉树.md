@@ -1,0 +1,24 @@
+---
+title: 合并二叉树
+date: 2021-03-12 22:58:40
+categories: 
+- Leetcode编程题
+---
+将两个二叉树合并，并且返回一个树
+思路：递归
+题目：617合并二叉树
+伪代码：
+{% codeblock  %}
+func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
+	if t1 == nil && t2 != nil {
+		return t2
+	}
+	if (t1 != nil && t2 == nil) || (t1 == nil && t2 == nil) {
+		return t1
+	}
+	t1.Val += t2.Val
+	t1.Left = mergeTrees(t1.Left, t2.Left)
+	t1.Right = mergeTrees(t1.Right, t2.Right)
+	return t1
+}
+{% endcodeblock %}
